@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contatos</title>
+<style>
+  :root {
+    --ink: #1c2b2d;
+    --paper: #f6f4ef;
+    --line: #d8d2c4;
+    --accent: #2f6f5e;
+    --accent-soft: #e4ede9;
+    --muted: #6b6459;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 440px;
+  }
+
+  .titulo {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .titulo h1 {
+    font-size: 1.4rem;
+    letter-spacing: 0.02em;
+    margin: 0 0 4px;
+  }
+
+  .titulo p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  /* ============================================= */
+  /* CADA CONTATO É UM BLOCO ".card" ABAIXO NO HTML */
+  /* Edite nome, cargo, telefone e email ali dentro  */
+  /* ============================================= */
+
+  .card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .card.desligado {
+    opacity: 0.55;
+  }
+
+  .card.desligado::after {
+    content: "Contato inativo";
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 0.7rem;
+    color: #b3463f;
+    border: 1px solid #b3463f;
+    border-radius: 20px;
+    padding: 2px 10px;
+  }
+
+  .nome {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 2px;
+  }
+
+  .cargo {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0 0 14px;
+  }
+
+  .linhas {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .linha {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 0.92rem;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: var(--accent-soft);
+  }
+
+  .linha:active {
+    opacity: 0.8;
+  }
+
+  .icone {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--accent);
+  }
+
+  .rodape {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.75rem;
+    margin-top: 24px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="titulo">
+    <h1>Fale conosco</h1>
+    <p>Contatos atualizados automaticamente</p>
+  </div>
+
+  <!-- ===================== CONTATO 1 ===================== -->
+  <div class="card">
+    <p class="nome">Nome Sobrenome</p>
+    <p class="cargo">Cargo / Setor</p>
+    <div class="linhas">
+      <a class="linha" href="tel:+5551999999999">
+        <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (51) 99999-9999
+      </a>
+      <a class="linha" href="https://wa.me/5551999999999" target="_blank">
+        <svg class="icone" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2z"/></svg>
+        WhatsApp
+      </a>
+      <a class="linha" href="mailto:email@exemplo.com">
+        <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+        email@exemplo.com
+      </a>
+    </div>
+  </div>
+
+  <!-- ===================== CONTATO 2 ===================== -->
+  <div class="card">
+    <p class="nome">Outro Nome</p>
+    <p class="cargo">Cargo / Setor</p>
+    <div class="linhas">
+      <a class="linha" href="tel:+5551988888888">
+        <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (51) 98888-8888
+      </a>
+      <a class="linha" href="https://wa.me/5551988888888" target="_blank">
+        <svg class="icone" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2z"/></svg>
+        WhatsApp
+      </a>
+      <a class="linha" href="mailto:outro@exemplo.com">
+        <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+        outro@exemplo.com
+      </a>
+    </div>
+  </div>
+
+  <!-- Exemplo de contato desligado (mostra "Contato inativo" e fica opaco) -->
+  <!--
+  <div class="card desligado">
+    <p class="nome">Fulano Desligado</p>
+    <p class="cargo">Ex-cargo</p>
+    <div class="linhas"></div>
+  </div>
+  -->
+
+  <!-- Para adicionar um 3º contato, copie um bloco ".card" inteiro e cole aqui embaixo -->
+
+  <div class="rodape">Atualizado em julho de 2026</div>
+
+</div>
+</body>
+</html>
